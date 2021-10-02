@@ -28,10 +28,10 @@ export const getWeather = (city: string): ThunkAction<void, RootState, null, Wea
         }
 
         catch (err) {
-            // dispatch({
-            //     type: SET_ERROR,
-            //     payload: err.response.data.message
-            // })
+            dispatch({
+                type: SET_ERROR,
+                payload: err.response.data.message
+            })
         }
     }
 }
